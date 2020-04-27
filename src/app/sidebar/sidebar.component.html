@@ -1,0 +1,28 @@
+
+<div class="sidebar-wrapper">
+  <div class="logo">
+    <a href="#" class="simple-text logo-mini">
+      <div class="logo-image-small">
+        <img src="assets/img/eye.png">
+      </div>
+    </a>
+    <a href="#" class="simple-text logo-normal">
+      Watching
+    </a>
+  </div>
+    <ul class="nav">
+        <li *ngFor="let menuItem of menuItems" routerlinkactive="active" class="{{menuItem.class}}">
+          <a [routerLink]="[menuItem.path]" (click)="isCollapsed = !isCollapsed" aria-expanded="false" data-toggle="collapse">
+            <i class="nc-icon {{menuItem.icon}}"></i>
+            <p>{{menuItem.title}}</p>
+          </a>
+          <ul *ngFor="let child of menuItem?.child" class="sidebar-child">
+            <li routerlinkactive="active">
+              <a [routerLink]="[child.path]">
+                <span class="sidebar-normal">{{child.title}}</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</div>
