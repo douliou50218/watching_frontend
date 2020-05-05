@@ -5,6 +5,9 @@
  
  [套版來源Paper Dashboard Angular](https://www.creative-tim.com/product/paper-dashboard-angular)
  
+ > npm install
+ > ng serve -o
+ 
  | 身分別    | API                    | HTTP Methods | 功能    |
 | ------- | ---------------------- | ------ | ------------------ |
 | student | 學生登入  studentLogin | post   | 學生輸入姓名、學號、IP以便進入系統 成功 => 產生一組JWT(用於請求API時，需帶在header作為驗證身份) |
