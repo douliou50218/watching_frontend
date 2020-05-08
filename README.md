@@ -6,6 +6,7 @@
  [套版來源Paper Dashboard Angular](https://www.creative-tim.com/product/paper-dashboard-angular)
  
  > npm install
+ >
  > ng serve -o
  
  | 身分別    | API                    | HTTP Methods | 功能    |
