@@ -6,22 +6,31 @@
       </div>
       <div class="card-body">
 
-          <form action="" method="">
-            <div class="position-relative row form-group"><label for="examName" class="col-sm-12 col-form-label">教師機代碼</label>
-                <div class="col-sm-12"><input name="examName" id="examName" placeholder="請輸入教師機代碼" type="text" class="form-control"></div>
+          <form [formGroup]="enterExamForm" (ngSubmit)="enterExam()">
+
+            <div class="position-relative row form-group"><label for="studentName" class="col-sm-12 col-form-label">考生姓名</label>
+                <div class="col-sm-12"><input formControlName="studentName" id="studentName" placeholder="請輸入考生姓名" type="text" class="form-control"></div>
             </div>
-            <div class="position-relative row form-group"><label for="examPasswd" class="col-sm-12 col-form-label">考場密碼</label>
-              <div class="col-sm-12"><input name="examPasswd" id="examPasswd" placeholder="請輸入考場密碼" type="text" class="form-control"></div>
+
+            <div class="position-relative row form-group"><label for="studentId" class="col-sm-12 col-form-label">考生學號</label>
+              <div class="col-sm-12"><input formControlName="studentId" id="studentId" placeholder="請輸入考生學號" type="text" class="form-control"></div>
             </div>
-            <div class="position-relative row form-group"><label for="examNumber" class="col-sm-12 col-form-label">考生學號</label>
-                <div class="col-sm-12"><input name="examNumber" id="examNumber" placeholder="請輸入考生學號" type="text" class="form-control"></div>
+
+            <div class="position-relative row form-group"><label for="studentIP" class="col-sm-12 col-form-label">考生IP</label>
+              <div class="col-sm-12"><input formControlName="studentIP" id="studentIP" placeholder="" type="text" class="form-control"></div>
             </div>
+
+            <div class="position-relative row form-group"><label for="teacherIP" class="col-sm-12 col-form-label">教師機IP</label>
+                <div class="col-sm-12"><input formControlName="teacherIP" id="teacherIP" placeholder="請輸入教師機IP" type="text" class="form-control"></div>
+            </div>
+
 
             <div class="row">
                 <div class="update ml-auto mr-auto">
-                  <button type="submit" class="btn btn-primary btn-round">進入考場</button>
+                  <button type="submit" [disabled]="enterExamForm.invalid"  class="btn btn-primary btn-round">進入考場</button>
                 </div>
             </div>
+
           </form>
 
       </div>

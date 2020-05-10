@@ -1,4 +1,5 @@
 interface JQuery {
+    modal: any;
     slick: any;
     elevateZoom: any;
     cnzipcode: any;

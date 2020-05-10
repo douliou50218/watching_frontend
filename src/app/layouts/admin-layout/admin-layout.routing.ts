@@ -10,7 +10,7 @@ import { RecordComponent } from 'app/pages/record/record.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user',           component: UserComponent },
+    // { path: 'user',           component: UserComponent },
     { path: 'openExam',          component: OpenExamComponent },
     { path: 'enterExam',          component: EnterExamComponent },
     { path: 'record',          component: RecordComponent }
