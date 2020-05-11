@@ -7,11 +7,13 @@ import { AddCraftPortfolioComponent } from 'app/pages/addCraftPortfolio/addCraft
 import { OpenExamComponent } from 'app/pages/openExam/openExam.compontent';
 import { EnterExamComponent } from 'app/pages/enterExam/enterExam.component';
 import { RecordComponent } from 'app/pages/record/record.component';
+import { TeacherExamScreenComponent } from 'app/pages/teacherExamScreen/teacherExamScreen.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     // { path: 'user',           component: UserComponent },
     { path: 'openExam',          component: OpenExamComponent },
     { path: 'enterExam',          component: EnterExamComponent },
-    { path: 'record',          component: RecordComponent }
+    { path: 'record',          component: RecordComponent },
+    { path: 'teacherExamScreen',          component: TeacherExamScreenComponent }
 ];

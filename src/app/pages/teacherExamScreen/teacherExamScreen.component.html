@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title"></h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+
+          <table class="table">
+            <thead class="text-primary">
+              <th *ngFor="let item of tableData1.headerRow">
+                {{item}}
+              </th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let rows of tableData1.dataRows">
+                <td>{{rows.ip}}</td>
+                <td>{{rows.studentName}}</td>
+                <td>{{rows.studentId}}</td>
+                <td>{{rows.timestamp}}</td>
+                <td>{{rows.probability}}</td>
+                <td>
+                  <button class="btn btn-primary btn-fab btn-icon btn-round" data-toggle="tooltip">
+                    <i class="fa fa-eye"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

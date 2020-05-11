@@ -20,6 +20,7 @@ import { AddCraftPortfolioComponent } from 'app/pages/addCraftPortfolio/addCraft
 import { OpenExamComponent } from 'app/pages/openExam/openExam.compontent';
 import { EnterExamComponent } from 'app/pages/enterExam/enterExam.component';
 import { RecordComponent } from 'app/pages/record/record.component';
+import { TeacherExamScreenComponent } from 'app/pages/teacherExamScreen/teacherExamScreen.component';
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { RecordComponent } from 'app/pages/record/record.component';
     OpenExamComponent,
     EnterExamComponent,
     RecordComponent,
+    TeacherExamScreenComponent,
     UserComponent,
     CraftPortfolioComponent,
     AddCraftPortfolioComponent,
