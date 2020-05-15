@@ -9,23 +9,25 @@
 
           <table class="table">
             <thead class="text-primary">
-              <th *ngFor="let item of tableData1.headerRow">
-                {{item}}
-              </th>
+              <th>考試代碼</th>
+              <th>學生學號</th>
+              <th>考場名稱</th>
+              <th>考試時間</th>
+              <th>操作</th>
             </thead>
             <tbody>
-              <tr *ngFor="let rows of tableData1.dataRows">
-                <td>{{rows.id}}</td>
-                <td>{{rows.name}}</td>
+              <tr *ngFor="let rows of records">
                 <td>{{rows.examId}}</td>
+                <td>{{rows.studentId}}</td>
+                <td>{{rows.examName}}</td>
                 <td>{{rows.examTime}}</td>
                 <td>
                   <button class="btn btn-primary btn-fab btn-icon btn-round" data-toggle="tooltip">
-                    <i class="fa fa-info"></i>
+                    <i class="fa fa-download"></i>
                   </button>&nbsp;&nbsp;
-                  <button class="btn btn-danger btn-fab btn-icon btn-round" data-toggle="tooltip">
+                  <!-- <button class="btn btn-danger btn-fab btn-icon btn-round" data-toggle="tooltip">
                     <i class="fa fa-trash"></i>
-                  </button>
+                  </button> -->
                 </td>
               </tr>
             </tbody>

@@ -16,13 +16,13 @@ import { TeacherService } from 'app/services/teacher.service';
 
 export class OpenExamComponent implements OnInit {
 
-  /** 引入 Student model 的資料型別 */
+  /** 引入 Teacher model 的資料型別 */
   teacher: Teacher = {
     teacherId: '',
     examToken: ''
   }
 
-  /** 進入考場的表單 */
+  /** 開啟考場的表單 */
   openExamForm: any = this.fb.group({
     teacherIP: ['', Validators.required],
     examName: ['', Validators.required],

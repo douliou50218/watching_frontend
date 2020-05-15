@@ -10,9 +10,9 @@ export class AuthService {
     ) {}
 
     public isAuthenticated(): boolean {
-        if (!localStorage.getItem(`${environment.keyOfToken}`)){
+        if (!localStorage.getItem(`${environment.keyOfToken}`)) {
             return false;
-        }else{
+        }else {
             return true
         }
 

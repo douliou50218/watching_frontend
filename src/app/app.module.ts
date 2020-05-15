@@ -30,6 +30,8 @@ import { environment } from 'environments/environment.prod';
 import { ModalService } from './services/modal.service';
 import { TeacherService } from './services/teacher.service';
 import { StudentService } from './services/student.service';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './services/authGuard.service';
 
 export function tokenGetter() {
   return localStorage.getItem(`${environment.keyOfToken}`);
@@ -39,7 +41,8 @@ export function tokenGetter() {
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -67,6 +70,7 @@ export function tokenGetter() {
   ],
   providers: [
    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
+    AuthGuard,
     ModalService,
     TeacherService,
     StudentService,

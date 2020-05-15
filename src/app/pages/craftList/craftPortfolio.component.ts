@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CraftPortfolioComponent implements OnInit {
-    public tableData1: TableData;
-    public tableData2: TableData;
+    // public tableData1: TableData;
+    // public tableData2: TableData;
     ngOnInit() {
         // this.tableData1 = {
         //     headerRow: [ '編號', '作品集名稱', '作品件數', '創立時間', '解鎖作品集', '操作'],

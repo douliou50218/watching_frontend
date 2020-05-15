@@ -20,7 +20,7 @@ export class TeacherService {
    * @memberof TeacherService
    */
   teacherLogin(login: object) {
-    return this.http.post(`${environment.baseUrl}/teacher/login`, login);
+    return this.http.post(`${environment.baseUrl}/teacher/teacherLogin`, login);
   }
 
   /**

@@ -19,8 +19,9 @@ import { CraftPortfolioComponent } from 'app/pages/craftList/craftPortfolio.comp
 import { AddCraftPortfolioComponent } from 'app/pages/addCraftPortfolio/addCraftPortfolio.component';
 import { OpenExamComponent } from 'app/pages/openExam/openExam.compontent';
 import { EnterExamComponent } from 'app/pages/enterExam/enterExam.component';
-import { RecordComponent } from 'app/pages/record/record.component';
 import { TeacherExamScreenComponent } from 'app/pages/teacherExamScreen/teacherExamScreen.component';
+import { StudentRecordComponent } from 'app/pages/studentRecord/studentRecord.component';
+import { TeacherRecordComponent } from 'app/pages/teacherRecord/teacherRecord.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { TeacherExamScreenComponent } from 'app/pages/teacherExamScreen/teacherE
     DashboardComponent,
     OpenExamComponent,
     EnterExamComponent,
-    RecordComponent,
+    StudentRecordComponent,
+    TeacherRecordComponent,
     TeacherExamScreenComponent,
     UserComponent,
     CraftPortfolioComponent,

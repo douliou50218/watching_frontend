@@ -21,7 +21,7 @@ export class StudentService {
    * @memberof StudentService
    */
   studentLogin(login: object) {
-    return this.http.post(`${environment.baseUrl}/student/login`, login);
+    return this.http.post(`${environment.baseUrl}/student/studentLogin`, login);
   }
 
   /**
