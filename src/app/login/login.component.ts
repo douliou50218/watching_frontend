@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { Student } from 'app/models/student.model';
 import { StudentService } from 'app/services/student.service';
 import { environment } from 'environments/environment.prod';
+import { AuthService } from 'app/services/auth.service';
 
 
 @Component({
@@ -50,12 +51,24 @@ export class LoginComponent implements OnInit {
     constructor(
       private teacherService: TeacherService,
       private studentService: StudentService,
+      private authService: AuthService,
       private fb: FormBuilder,
       private router: Router
     ) { }
 
     ngOnInit() {
+      this.checkLogin();
     }
+  /**
+   * 檢查登入狀態
+   *
+   * @memberof LoginComponent
+   */
+  checkLogin() {
+    if (this.authService.isAuthenticated() === true) {
+      this.router.navigate(['dashboard']);
+    }
+  }
 
   /**
    * 選擇教師登入
