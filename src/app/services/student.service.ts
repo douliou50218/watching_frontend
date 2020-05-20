@@ -32,7 +32,7 @@ export class StudentService {
    * @memberof StudentService
    */
   refreshStudentToken(): Observable<any> {
-    return this.http.put(`${environment.baseUrl}/student/refresh/token`, {})
+    return this.http.put(`${environment.baseUrl}/Yn`, {})
   }
 
   /**

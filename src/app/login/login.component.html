@@ -29,7 +29,7 @@
 
         <form [formGroup]="teacherForm" *ngIf="isShownTeacher" (ngSubmit)="teacherLogin()">
           <div class="position-relative row form-group"><label for="teacherName" class="col-sm-12 col-form-label">教師姓名</label>
-              <div class="col-sm-12"><input name="teacherName" id="teacherName" placeholder="請輸入教師姓名" type="text" class="form-control"></div>
+              <div class="col-sm-12"><input formControlName="teacherName" id="teacherName" placeholder="請輸入教師姓名" type="text" class="form-control"></div>
           </div>
 
           <div class="row">

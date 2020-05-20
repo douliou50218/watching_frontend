@@ -19,16 +19,19 @@ export class OpenExamComponent implements OnInit {
   /** 引入 Teacher model 的資料型別 */
   teacher: Teacher = {
     teacherId: '',
-    examToken: ''
+    examToken: '',
+    examID: '',
+    examStartTime: '',
+    examEndTime: '',
+    message: ''
   }
 
   /** 開啟考場的表單 */
   openExamForm: any = this.fb.group({
-    teacherIP: ['', Validators.required],
     examName: ['', Validators.required],
     examStartTime: ['', Validators.required],
     examEndTime: ['', Validators.required],
-    examNumber: ['', Validators.required]
+    examCount: ['', Validators.required]
   });
 
   constructor(
@@ -53,20 +56,20 @@ export class OpenExamComponent implements OnInit {
 
     /** 進入考場所傳入的資料 */
     const examInfo: object = {
-      teacherIP: this.f.teacherIP.value,
       examName: this.f.examName.value,
       examStartTime: this.f.examStartTime.value,
       examEndTime: this.f.examEndTime.value,
-      examNumber: this.f.examNumber.value
+      examCount: this.f.examCount.value
     }
 
     // 老師開啟考場
     this.teacherService.openExam(examInfo)
       .subscribe(
         (data: any) => {
-          this.teacher.examToken = data.Examtoken;
-          localStorage.setItem(`${environment.keyOfExamToken}`, this.teacher.examToken);
-          this.openMessageModal(`成功開啟考場，你的考場TOKEN是${this.teacher.examToken}`);
+          localStorage.setItem('examID', this.teacher.examID);
+          localStorage.setItem('examStartTime', this.teacher.examStartTime);
+          localStorage.setItem('examEndTime', this.teacher.examEndTime);
+          this.openMessageModal(`${this.teacher.message}，你的考場ID是${this.teacher.examID}<br>考試時間為${this.teacher.examStartTime}~${this.teacher.examEndTime}`);
           // location.reload();
         }
       ),error => { }

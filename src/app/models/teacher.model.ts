@@ -20,6 +20,19 @@ export class Teacher {
 
   /** examToken */
   examToken?: string;
+
+  /** 考場id */
+  examID?: string;
+
+  /** 考場開始時間 */
+  examStartTime?: string;
+
+  /** 考場結束時間 */
+  examEndTime?: string;
+
+  /** 訊息 */
+  message?: string
+
 }
 
 

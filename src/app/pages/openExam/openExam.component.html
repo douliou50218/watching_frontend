@@ -8,10 +8,6 @@
 
           <form [formGroup]="openExamForm" (ngSubmit)="openExam()">
 
-            <div class="position-relative row form-group"><label for="teacherIP" class="col-sm-12 col-form-label">教師機IP</label>
-              <div class="col-sm-12"><input formControlName="teacherIP" id="teacherIP" placeholder="請輸入教師機IP" type="text" class="form-control"></div>
-            </div>
-
             <div class="position-relative row form-group"><label for="examName" class="col-sm-12 col-form-label">考場名稱</label>
                 <div class="col-sm-12"><input formControlName="examName" id="examName" placeholder="請輸入考場名稱" type="text" class="form-control"></div>
             </div>
@@ -21,8 +17,8 @@
                 <div class="col-sm-6"><input formControlName="examEndTime" id="examEndTime" placeholder="請選擇結束時間" type="time" class="form-control"></div>
             </div>
 
-            <div class="position-relative row form-group"><label for="examNumber" class="col-sm-12 col-form-label">考場人數</label>
-              <div class="col-sm-12"><input formControlName="examNumber" id="examNumber" placeholder="請輸入考場人數" type="text" class="form-control"></div>
+            <div class="position-relative row form-group"><label for="examCount" class="col-sm-12 col-form-label">考場人數</label>
+              <div class="col-sm-12"><input formControlName="examCount" id="examCount" placeholder="請輸入考場人數" type="text" class="form-control"></div>
             </div>
 
             <div class="row">

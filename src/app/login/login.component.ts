@@ -126,7 +126,7 @@ export class LoginComponent implements OnInit {
     this.studentService.studentLogin(loginInfo)
       .subscribe(
         (data: any) => {
-          this.student.token = data;
+          this.student.token = data.token;
           localStorage.setItem(`${environment.keyOfToken}`, this.student.token);
           this.router.navigate(['enterExam']);
         }
@@ -149,7 +149,7 @@ export class LoginComponent implements OnInit {
     this.teacherService.teacherLogin(loginInfo)
       .subscribe(
         (data: any) => {
-          this.teacher.token = data;
+          this.teacher.token = data.token;
           localStorage.setItem(`${environment.keyOfToken}`, this.teacher.token);
           this.router.navigate(['openExam']);
         }
