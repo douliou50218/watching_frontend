@@ -117,7 +117,7 @@ export class LoginComponent implements OnInit {
   studentLogin() {
 
     /** 學生登入所傳入的資料 */
-    const loginInfo: object = {
+    const loginInfo: any = {
       studentName: this.sf.studentName.value,
       studentId: this.sf.studentId.value,
     }
@@ -128,6 +128,9 @@ export class LoginComponent implements OnInit {
         (data: any) => {
           this.student.token = data.token;
           localStorage.setItem(`${environment.keyOfToken}`, this.student.token);
+          localStorage.setItem(`${environment.keyOfStudentId}`, loginInfo.studentId);
+          localStorage.setItem(`${environment.keyOfStudentName}`, loginInfo.studentName);
+          localStorage.setItem(`${environment.auth}`, '1');
           this.router.navigate(['enterExam']);
         }
       )
@@ -141,7 +144,7 @@ export class LoginComponent implements OnInit {
   teacherLogin() {
 
     /** 教師登入所傳入的資料 */
-    const loginInfo: object = {
+    const loginInfo: any = {
       teacherName: this.tf.teacherName.value,
     }
 
@@ -151,6 +154,8 @@ export class LoginComponent implements OnInit {
         (data: any) => {
           this.teacher.token = data.token;
           localStorage.setItem(`${environment.keyOfToken}`, this.teacher.token);
+          localStorage.setItem(`${environment.keyOfTeacherName}`, loginInfo.teacherName);
+          localStorage.setItem(`${environment.auth}`, '9');
           this.router.navigate(['openExam']);
         }
       )
