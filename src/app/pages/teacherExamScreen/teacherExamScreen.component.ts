@@ -44,6 +44,17 @@ export class TeacherExamScreenComponent implements OnInit {
         }
     }
 
+    /**
+     * 教師端監考畫面前端監聽後端log資料
+     *
+     * @memberof TeacherExamScreenComponent
+     */
+    cheatpic() {
+      this.teacherService.cheatpic().subscribe((responseBody) => {
+        console.log(responseBody);
+      });
+    }
+
     // 幫Form取個簡短的代號
     get ef() { return this.extendExamForm.controls; }
 

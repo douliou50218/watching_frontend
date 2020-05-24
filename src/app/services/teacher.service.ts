@@ -56,13 +56,22 @@ export class TeacherService {
   }
 
   /**
+   * 教師端接收作弊log&圖片
+   *
+   * @memberof TeacherService
+   */
+  cheatpic() {
+    return this.http.get(`${environment.baseUrl}/teacher/cheatpic`);
+  }
+
+  /**
    * 教師延長考試
    *
    * @returns
    * @memberof TeacherService
    */
   extendExam(examInfo: object) {
-    return this.http.get(`${environment.baseUrl}/teacher/extendExam`, examInfo);
+    return this.http.put(`${environment.baseUrl}/teacher/extendExam`, examInfo);
   }
 
   /**
@@ -72,7 +81,7 @@ export class TeacherService {
    * @memberof TeacherService
    */
   closeExam(examInfo: object) {
-    return this.http.get(`${environment.baseUrl}/teacher/closeExam`, examInfo);
+    return this.http.put(`${environment.baseUrl}/teacher/closeExam`, examInfo);
   }
 
 }
