@@ -55,4 +55,24 @@ export class TeacherService {
     return this.http.get(`${environment.baseUrl}/teacher/recordList`);
   }
 
+  /**
+   * 教師延長考試
+   *
+   * @returns
+   * @memberof TeacherService
+   */
+  extendExam(examInfo: object) {
+    return this.http.get(`${environment.baseUrl}/teacher/extendExam`, examInfo);
+  }
+
+  /**
+   * 教師關閉考場
+   *
+   * @returns
+   * @memberof TeacherService
+   */
+  closeExam(examInfo: object) {
+    return this.http.get(`${environment.baseUrl}/teacher/closeExam`, examInfo);
+  }
+
 }

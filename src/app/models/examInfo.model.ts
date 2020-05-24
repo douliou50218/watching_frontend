@@ -1,11 +1,13 @@
-declare interface ExamInfo {
-  headerRow: string[];
-  dataRows: ExamInfoRows[];
+export interface ExamInfo {
+  headerRow?: string[];
+  dataRows?: ExamInfoRows[];
 }
-declare interface ExamInfoRows {
-  ip: string;
-  studentName: string;
-  studentId: string;
-  timestamp: string;
-  probability: string;
+export interface ExamInfoRows {
+  connectionStatus?: string;
+  connectionTime?: string;
+  ip?: string;
+  studentName?: string;
+  studentId?: string;
+  timestamp?: string;
+  probability?: string;
 }
