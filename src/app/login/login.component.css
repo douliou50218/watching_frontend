@@ -1,0 +1,26 @@
+@import '../../styles.css';
+
+#bg {
+  background-image: url('../..//assets/img/students-working-and-studying-flatlay.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  opacity:0.5;
+}
+
+.login-set {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.card {
+  margin: 0 auto;
+  width: 656px;
+  height: 330px;
+}
+
+button {
+  height: 90%;
+}

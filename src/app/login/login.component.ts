@@ -13,6 +13,7 @@ import { AuthService } from 'app/services/auth.service';
 @Component({
     selector: 'app-login',
     moduleId: module.id,
+    styleUrls: ['login.component.css'],
     templateUrl: 'login.component.html'
 })
 
