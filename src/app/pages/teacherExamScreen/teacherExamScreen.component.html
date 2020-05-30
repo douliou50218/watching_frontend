@@ -1,0 +1,154 @@
+<div class="row">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header">
+              <h4 class="card-title"></h4>
+
+              <div class="float-md-right">
+                  <button class="btn btn-outline-primary" data-toggle="modal" data-target="#extendModal">延長考試</button>
+                  <button class="btn btn-outline-primary" data-toggle="modal" data-target="#closeModal">關閉考場</button>
+              </div>
+          </div>
+          <div class="card-body">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead class="text-primary">
+                          <th *ngFor="let item of tableData.headerRow">
+                              {{item}}
+                          </th>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let rows of tableData.dataRows">
+                              <td>{{rows.connectionStatus}}</td>
+                              <td>{{rows.ip}}</td>
+                              <td>{{rows.studentName}}</td>
+                              <td>{{rows.studentId}}</td>
+                              <td>{{rows.timestamp}}</td>
+                              <td>{{rows.probability}}</td>
+                              <td>
+                                  <button class="btn btn-primary btn-fab btn-icon btn-round" data-toggle="modal" data-target="#showImg">
+                                      <i class="fa fa-eye"></i>
+                                  </button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- img Modal -->
+<div class="modal fade" id="showImg" tabindex="-1" role="dialog" aria-labelledby="showImgTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="2000">
+                  <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img
+                              src="https://scontent-atl3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/89292457_2714602878587480_1053780983376694745_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=108&_nc_ohc=62j088OBBU8AX-Jcg2P&oh=52d8d4b9b67a8a918fa47d950149b9ad&oe=5EDCB5FD"
+                              class="d-block w-100"
+                              alt="..."
+                          />
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5>2020-05-12 09:40:12</h5>
+                              <p>作弊機率 70%</p>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <img
+                              src="https://scontent-atl3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/89292457_2714602878587480_1053780983376694745_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=108&_nc_ohc=62j088OBBU8AX-Jcg2P&oh=52d8d4b9b67a8a918fa47d950149b9ad&oe=5EDCB5FD"
+                              class="d-block w-100"
+                              alt="..."
+                          />
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5>2020-05-12 09:40:14</h5>
+                              <p>作弊機率 70%</p>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <img
+                              src="https://scontent-atl3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/89292457_2714602878587480_1053780983376694745_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=108&_nc_ohc=62j088OBBU8AX-Jcg2P&oh=52d8d4b9b67a8a918fa47d950149b9ad&oe=5EDCB5FD"
+                              class="d-block w-100"
+                              alt="..."
+                          />
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5>2020-05-12 09:40:16</h5>
+                              <p>作弊機率 70%</p>
+                          </div>
+                      </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- closeExam  Modal -->
+<div class="modal fade" id="closeModal" tabindex="-1" role="dialog" aria-labelledby="closeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              確定要現在就結束考試嗎?
+          </div>
+          <div class="modal-footer">
+              <button type="submit" (click)="closeExam()" class="btn btn-primary">確定結束</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- extendExam  Modal -->
+<div class="modal fade" id="extendModal" tabindex="-1" role="dialog" aria-labelledby="extendModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <form [formGroup]="extendExamForm" (ngSubmit)="extendExam()">
+              <div class="modal-body">
+                  <div class="position-relative row form-group">
+                      <label for="studentName" class="col-sm-12 col-form-label">延長考試結束時間</label>
+                      <div class="col-sm-6"><input formControlName="examEndTime" id="examEndTime" placeholder="請選擇結束時間" type="time" class="form-control" /></div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">延長考試</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>

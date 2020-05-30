@@ -1,0 +1,65 @@
+<div id="bg">
+
+</div>
+
+<div class="row no-gutters">
+  <div class="col-md-12 login-set">
+    <div class="card">
+      <div class="card-header">
+
+        <h4 class="card-title">&nbsp;
+          <button type="button" *ngIf="btnBack" (click)="btnBackToChoice()" class="backToChoice close" style="float: none;"><span class="fa fa-arrow-left" aria-hidden="true"></span></button>
+          &nbsp;{{title}}
+        </h4>
+
+      </div>
+      <div class="card-body">
+
+        <div class="row h-100" *ngIf="isShownChoice">
+
+          <div class="col-12 col-md-6">
+            <button type="button" (click)="choiceTeacher()" id="teacherLogin" class="btn text-danger col-12 h1 mb-1">
+              <p>老師</p><i class="nc-icon nc-paper"></i>
+            </button>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <button type="button" (click)="choiceStudent()" id="studentLogin" class="btn text-warning col-12 h1 mb-1">
+              <p>學生</p><i class="nc-icon nc-ruler-pencil"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <form [formGroup]="teacherForm" *ngIf="isShownTeacher" (ngSubmit)="teacherLogin()">
+          <div class="position-relative row form-group mt-3"><label for="teacherName" class="col-sm-12 col-form-label">教師姓名</label>
+              <div class="col-sm-12 mt-1"><input formControlName="teacherName" id="teacherName" placeholder="請輸入教師姓名" type="text" class="form-control"></div>
+          </div>
+
+          <div class="row">
+              <div class="update ml-auto mr-auto mt-5">
+                <button type="submit" class="btn btn-primary btn-round">確認</button>
+              </div>
+          </div>
+        </form>
+
+        <form [formGroup]="studentForm" *ngIf="isShownStudent" (ngSubmit)="studentLogin()">
+          <div class="position-relative row form-group"><label for="studentName" class="col-sm-12 col-form-label">學生姓名</label>
+              <div class="col-sm-12"><input formControlName="studentName" id="studentName" placeholder="請輸入學生姓名" type="text" class="form-control"></div>
+          </div>
+          <div class="position-relative row form-group"><label for="studentId" class="col-sm-12 col-form-label">學生學號</label>
+            <div class="col-sm-12"><input formControlName="studentId" id="studentId" placeholder="請輸入學生學號" type="text" class="form-control"></div>
+          </div>
+
+
+          <div class="row">
+              <div class="update ml-auto mr-auto">
+                <button type="submit" class="btn btn-primary btn-round">確認</button>
+              </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

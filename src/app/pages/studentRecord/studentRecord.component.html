@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">考試紀錄</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+
+          <table class="table">
+            <thead class="text-primary">
+              <th>考試代碼</th>
+              <th>考場老師</th>
+              <th>考場名稱</th>
+              <th>考試時間</th>
+              <th>操作</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let rows of records">
+                <td>{{rows.examId}}</td>
+                <td>{{rows.examTeacher}}</td>
+                <td>{{rows.examName}}</td>
+                <td>{{rows.examTime}}</td>
+                <td>
+                  <button class="btn btn-primary btn-fab btn-icon btn-round" data-toggle="tooltip">
+                    <i class="fa fa-download"></i>
+                  </button>&nbsp;&nbsp;
+                  <!-- <button class="btn btn-danger btn-fab btn-icon btn-round" data-toggle="tooltip">
+                    <i class="fa fa-trash"></i>
+                  </button> -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
