@@ -6,28 +6,27 @@
       </div>
       <div class="card-body">
 
-          <form action="" method="">
+          <form [formGroup]="openExamForm" (ngSubmit)="openExam()">
+
             <div class="position-relative row form-group"><label for="examName" class="col-sm-12 col-form-label">考場名稱</label>
-                <div class="col-sm-12"><input name="examName" id="examName" placeholder="請輸入考場名稱" type="text" class="form-control"></div>
+                <div class="col-sm-12"><input formControlName="examName" id="examName" placeholder="請輸入考場名稱" type="text" class="form-control"></div>
             </div>
-            <div class="position-relative row form-group"><label for="examPasswd" class="col-sm-12 col-form-label">考場密碼</label>
-              <div class="col-sm-12"><input name="examPasswd" id="examPasswd" placeholder="請輸入考場密碼" type="text" class="form-control"></div>
-          </div>
-            <div class="position-relative row form-group"><label for="examNumber" class="col-sm-12 col-form-label">考場人數</label>
-                <div class="col-sm-12"><input name="examNumber" id="examNumber" placeholder="請輸入考場人數" type="text" class="form-control"></div>
+
+            <div class="position-relative row form-group"><label for="examTime" class="col-sm-12 col-form-label">考試時間</label>
+                <div class="col-sm-6"><input formControlName="examStartTime" id="examStartTime" placeholder="請選擇開始時間" type="time" class="form-control"></div>
+                <div class="col-sm-6"><input formControlName="examEndTime" id="examEndTime" placeholder="請選擇結束時間" type="time" class="form-control"></div>
             </div>
-            <div class="position-relative row form-group"><label for="userAddress" class="col-sm-12 col-form-label">考試時間</label>
-                <div class="col-sm-12"><input name="userAddress" id="userAddress" placeholder="請選擇開始時間" type="text" class="form-control"></div>
-                <div class="col-sm-12"><input name="userAddress" id="userAddress" placeholder="請選擇結束時間" type="text" class="form-control"></div>
+
+            <div class="position-relative row form-group"><label for="examCount" class="col-sm-12 col-form-label">考場人數</label>
+              <div class="col-sm-12"><input formControlName="examCount" id="examCount" placeholder="請輸入考場人數" type="text" class="form-control"></div>
             </div>
-            <div class="position-relative row form-group"><label for="userIntro" class="col-sm-12 col-form-label">考場簡介</label>
-                <div class="col-sm-12"><textarea name="userIntro" id="userIntro" placeholder="請輸入考場簡介" class="form-control"></textarea></div>
-            </div>
+
             <div class="row">
                 <div class="update ml-auto mr-auto">
-                  <button type="submit" class="btn btn-primary btn-round">開啟考場</button>
+                  <button type="submit" [disabled]="openExamForm.invalid" class="btn btn-primary btn-round">開啟考場</button>
                 </div>
             </div>
+
           </form>
 
       </div>

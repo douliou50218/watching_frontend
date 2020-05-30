@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
@@ -19,20 +19,25 @@ import { CraftPortfolioComponent } from 'app/pages/craftList/craftPortfolio.comp
 import { AddCraftPortfolioComponent } from 'app/pages/addCraftPortfolio/addCraftPortfolio.component';
 import { OpenExamComponent } from 'app/pages/openExam/openExam.compontent';
 import { EnterExamComponent } from 'app/pages/enterExam/enterExam.component';
-import { RecordComponent } from 'app/pages/record/record.component';
+import { TeacherExamScreenComponent } from 'app/pages/teacherExamScreen/teacherExamScreen.component';
+import { StudentRecordComponent } from 'app/pages/studentRecord/studentRecord.component';
+import { TeacherRecordComponent } from 'app/pages/teacherRecord/teacherRecord.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
+    ReactiveFormsModule,
     NgbModule
   ],
   declarations: [
     DashboardComponent,
     OpenExamComponent,
     EnterExamComponent,
-    RecordComponent,
+    StudentRecordComponent,
+    TeacherRecordComponent,
+    TeacherExamScreenComponent,
     UserComponent,
     CraftPortfolioComponent,
     AddCraftPortfolioComponent,
