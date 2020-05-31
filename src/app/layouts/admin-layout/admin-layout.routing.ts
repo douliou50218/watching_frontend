@@ -4,6 +4,7 @@ import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
 import { OpenExamComponent } from 'app/pages/openExam/openExam.compontent';
 import { EnterExamComponent } from 'app/pages/enterExam/enterExam.component';
 import { TeacherExamScreenComponent } from 'app/pages/teacherExamScreen/teacherExamScreen.component';
+import { StudentExamScreenComponent } from 'app/pages/studentExamScreen/studentExamScreen.component';
 import { StudentRecordComponent } from 'app/pages/studentRecord/studentRecord.component';
 import { TeacherRecordComponent } from 'app/pages/teacherRecord/teacherRecord.component';
 
@@ -13,5 +14,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'enterExam',          component: EnterExamComponent },
     { path: 'teacherRecord',          component: TeacherRecordComponent },
     { path: 'studentRecord',          component: StudentRecordComponent },
-    { path: 'teacherExamScreen',          component: TeacherExamScreenComponent }
+    { path: 'teacherExamScreen',          component: TeacherExamScreenComponent },
+    { path: 'studentExamScreen',          component: StudentExamScreenComponent },
 ];
