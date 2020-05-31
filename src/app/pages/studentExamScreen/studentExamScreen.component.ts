@@ -1,5 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 
+interface MyVideoElement extends HTMLVideoElement {
+  requestPictureInPicture(): any;
+}
+
+interface MyDocument extends Document {
+  exitPictureInPicture(): any;
+}
 
 @Component({
   selector: 'app-studentExamScreen',
@@ -10,7 +17,7 @@ import {Component, OnInit} from '@angular/core';
 
 export class StudentExamScreenComponent implements OnInit {
   ngOnInit() {
-    const video = <HTMLVideoElement>document.querySelector('#videoElement');
+    const video = <MyVideoElement>document.querySelector('#videoElement');
 
     let flag = true;
 
@@ -29,7 +36,8 @@ export class StudentExamScreenComponent implements OnInit {
         video.requestPictureInPicture();
         flag = false;
       } else {
-        document.exitPictureInPicture();
+        const mydocument = <MyDocument>document;
+        mydocument.exitPictureInPicture();
         flag = true;
       }
     })
